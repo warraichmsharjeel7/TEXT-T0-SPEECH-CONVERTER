@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://sc.filehippo.net/images/t_app-icon-l/p/df6d18d2-6889-4fb7-b4cc-e0c352148891/1788585959/metavoicer-text-to-speech-logo">
+    <title>Text to Speech Converter</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="hero">
+        <div class="card-container">
+            <h1>Text To Speech <span>Converter</span></h1>
+            <p class="subtitle">Write your text here and listen to it in any voice.</p>
+            
+            <div class="input-group">
+                <textarea placeholder="Write anything here ...."></textarea>
+            </div>
+
+            <div class="row">
+                <div class="select-wrapper">
+                    <select id="voiceSelect">
+                        <option value="" disabled selected>Voices load ho rahi hain...</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+                <button id="listenBtn">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Listen</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

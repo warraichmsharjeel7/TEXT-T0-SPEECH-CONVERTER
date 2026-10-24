@@ -1,0 +1,237 @@
+/* Basic Reset & Setup */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0c20;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Glowing Globes */
+.background-globes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.globe {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+}
+
+.globe-1 {
+    width: 350px;
+    height: 350px;
+    background: #ff2963;
+    top: 10%;
+    left: 15%;
+}
+
+.globe-2 {
+    width: 400px;
+    height: 400px;
+    background: #490d61;
+    bottom: 10%;
+    right: 15%;
+}
+
+/* Main Hero Section */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Glassmorphism Card */
+.card-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.card-container h1 span {
+    color: #ff2963;
+    background: linear-gradient(45deg, #ff2963, #ff6b8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: #a0a5c3;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Textarea Input */
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    background: rgba(20, 18, 45, 0.7);
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    outline: none;
+    padding: 20px;
+    border-radius: 16px;
+    resize: none;
+    transition: all 0.3s ease;
+    line-height: 1.5;
+}
+
+textarea:focus {
+    border-color: #ff2963;
+    box-shadow: 0 0 15px rgba(255, 41, 99, 0.3);
+}
+
+textarea::placeholder {
+    color: #6c7293;
+    font-size: 15px;
+}
+
+/* Bottom Control Row */
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Voice Select Dropdown */
+.select-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+select {
+    width: 100%;
+    height: 52px;
+    color: #ffffff;
+    background: rgba(20, 18, 45, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0 45px 0 20px;
+    outline: none;
+    border-radius: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: #ff2963;
+}
+
+select option {
+    background: #1a1638;
+    color: #ffffff;
+}
+
+.select-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff2963;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(45deg, #ff2963, #ff5e62);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 30px;
+    height: 52px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(255, 41, 99, 0.4);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 41, 99, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button i {
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 580px) {
+    .card-container {
+        padding: 25px 20px;
+    }
+
+    .card-container h1 {
+        font-size: 24px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .select-wrapper, button {
+        width: 100%;
+    }
+}
